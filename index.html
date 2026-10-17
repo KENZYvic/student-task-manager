@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student Task Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <h1>Student Task Manager</h1>
+    <p class="subtitle">Keep track of your schoolwork and never miss a deadline.</p>
+
+    <form id="task-form">
+      <input type="text" id="task-input" placeholder="e.g. Complete Python assignment" autocomplete="off">
+      <button type="submit" class="add-btn">Add Task</button>
+    </form>
+    <!-- Send Error Message IF Empty -->
+    <p id="error-message" class="error"></p>
+
+    <!-- Task statistics -->
+    <div class="stats">
+      <p>Total: <p id="total-count">0</p></p>
+      <p>Completed: <p id="completed-count">0</p></p>
+      <p>Pending: <p id="pending-count">0</p></p>
+    </div>
+
+    <!-- Empty list: main.js fills this in -->
+    <ul id="task-list"></ul>
+  </main>
+
+  <!-- type="module" lets us use import and export -->
+  <script type="module" src="main.js"></script>
+</body>
+</html>
